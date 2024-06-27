@@ -1,0 +1,158 @@
+import 'package:flutter/material.dart';
+
+class KhRegisterPage extends StatefulWidget {
+  const KhRegisterPage({super.key});
+
+  @override
+  State<KhRegisterPage> createState() => _KhRegisterPageState();
+}
+
+class _KhRegisterPageState extends State<KhRegisterPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFFFFFFF),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFFFFFFF),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: const Color(0xFF0041C7),
+          iconSize: 40,
+          onPressed: () {
+            Navigator.pushNamed(context, '/login');
+          },
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage('images/logo/kroya02.png'),
+                width: 200,
+                height: 200,
+              ),
+              Text(
+                'បង្កើតគណនី',
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Color(0xFF0041C7),
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                padding: const EdgeInsets.all(25),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(top: 30),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: 'ឈ្មោះ.....',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                              width: 2.0,
+                            ),
+                          ),
+                          prefixIcon: Icon(Icons.person, color: Color(0xFF0041C7)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: 'លេខទូរស័ព្ទ.....',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                              width: 2.0,
+                            ),
+                          ),
+                          prefixIcon: Icon(Icons.phone, color: Color(0xFF0041C7)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: 'លេខសម្ងាត់.....',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 10, 73, 189),
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 10, 73, 189),
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Add rounded corners
+                            borderSide: BorderSide(
+                              color: Color(0xFF0041C7),
+                              width: 2.0,
+                            ),
+                          ),
+                          prefixIcon: Icon(Icons.lock, color: Color(0xFF0041C7)),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 80,
+                      width: 300,
+                      margin: EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.all(10),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                          const Color.fromARGB(255, 10, 73, 189),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/foodoption_kh');
+                        },
+                        child: const Text(
+                          'បង្កើតគណនី',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
